@@ -1,3 +1,4 @@
+# encoding: utf-8
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -7,11 +8,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 site = Site.new
+site.name = 'Test China'
 
 site.fragment.footer = <<-EOF
 <div class="pull-left">
-  <p>CodeCampo is a small community for web develeper and open source in <a href="https://github.com/chloerei/code_campo">Github</a> by <a href="https://twitter.com/chloerei">@chloerei</a>.</p>
-  <p>Feel free to use source code under MIT license.</p>
+  <p>Test China 是一个小型的软件测试社区，致力于技术交流和提高软件质量。</p>
+  <p>感谢 <a href="http://codecampo.com/">CodeCampo</a> 提供建站代码</p>
 </div>
 <div class="pull-right">
   <p><a href="#top">Back to top</a></p>

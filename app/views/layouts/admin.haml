@@ -16,7 +16,7 @@
     #topbar
       .container
         .logo
-          = link_to @site.name, admin_dashboard_path, :class => 'brand'
+          = link_to image_tag("logo.png"), admin_dashboard_path, :class => 'brand'
         %ul.nav.nav-pills
           %li{:class => (controller_name == 'dashboard' ? 'active' : nil)}
             = link_to t('.dashboard'), admin_dashboard_path
