@@ -13,6 +13,8 @@ class Topic
   field :marker_ids,         :type => Array,   :default => []
   field :replier_ids,        :type => Array,   :default => []
   field :last_read_user_ids, :type => Array,   :default => []
+  field :draft,              :type => Integer, :default => 0
+
 
   belongs_to :user
   belongs_to :last_reply_user, :class_name => 'User'
@@ -122,5 +124,9 @@ class Topic
     unless last_read?(user)
       add_to_set(:last_read_user_ids, user.id)
     end
+  end
+
+  def draft?
+    self.draft == 1
   end
 end

@@ -21,7 +21,10 @@
         %section#topics.box.no-padding
           %table.item-list
             %tbody
-              = render :partial => 'topics/topic', :collection => @topics
+              - if @person == current_user
+                = render :partial => 'topics/topic', :collection => @topics
+              - else
+                = render :partial => 'topics/topic', :collection => @topics.select {|topic| !topic.draft?}
       #sidebar.span3
         %section.box
           %header= t('.person_status')

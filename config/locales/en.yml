@@ -6,6 +6,8 @@ en:
   submit: "Submit"
   update: "Update"
   save: "Save"
+  save_as_draft: "Save as draft"
+  draft: "draft"
   delete: "Delete"
   add: "Add"
   form_disable_with: "Posting..."
@@ -72,6 +74,8 @@ en:
       topics_count: "Topics %{count}"
       replies_count: "Replies %{count}"
   users:
+    index:
+      member: "Memeber"
     new:
       already_have_account: "Already signup?"
   user_sessions:

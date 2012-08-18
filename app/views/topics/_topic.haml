@@ -19,6 +19,10 @@
           = link_to_person(topic.last_reply_user)
           = t 'replied_at'
           = format_time topic.actived_at
+      - if topic.draft?
+        %span.label.label-warning
+          = t('draft')
+
   %td.reply-count.last
     - if topic.replies_count > 0
       = link_to topic.replies_count, topic_path(topic, :page => topic.last_page), :class => ((logined? && topic.last_read?(current_user)) ? 'read' : nil)

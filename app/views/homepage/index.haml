@@ -7,7 +7,7 @@
         %section#topics.box.no-padding
           %table.item-list
             %tbody
-              = render :partial => 'topics/topic', :collection => @topics
+              = render :partial => 'topics/topic', :collection => @topics.select {|topic| !topic.draft?}
           %footer
             = link_to t('.more_topics'), topics_path
         = raw @site.fragment.home_mainbar_bottom

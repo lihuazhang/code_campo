@@ -43,7 +43,13 @@
                       = link_to image_tag(@topic.user.gravatar_url(:size => 72)), person_path(@topic.user)
             ~ format_text @topic.content, :mention_names => @topic.mentioned_user_names
             %footer
-              = render :partial => 'marks_count', :locals => {:topic => @topic}
+              - if @topic.draft?
+                %span.label.label-warning
+                  = t('draft')
+              - else
+                = render :partial => 'marks_count', :locals => {:topic => @topic}
+
+
         %section#replies.box.no-padding
           %table.item-list
             %tbody

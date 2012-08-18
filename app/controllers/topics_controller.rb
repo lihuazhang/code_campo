@@ -57,6 +57,12 @@ class TopicsController < ApplicationController
 
   def create
     @topic = current_user.topics.new params[:topic]
+    if params['draft']
+      @topic.draft = 1
+    else
+      @topic.draft = 0
+    end
+
     if @topic.save
       redirect_to @topic
     else
@@ -85,6 +91,13 @@ class TopicsController < ApplicationController
 
   def update
     @topic.set_edited_at
+
+    if params['draft']
+      @topic.draft = 1
+    else
+      @topic.draft = 0
+    end
+
     if @topic.update_attributes params[:topic]
       redirect_to @topic
     else
