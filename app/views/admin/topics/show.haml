@@ -30,3 +30,4 @@
         %section.box
           %header= t '.action'
           = button_to t('delete'), admin_topic_path(@topic), :class => 'btn btn-danger', :method => :delete, :data => {:confirm => t('.delete_confirm', :title => @topic.title)}
+          = link_to t('edit'), edit_admin_topic_path(@topic), :class => 'btn btn-primary'

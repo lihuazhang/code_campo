@@ -8,6 +8,20 @@ class Admin::TopicsController < Admin::BaseController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    @topic.set_edited_at
+
+    if @topic.update_attributes params[:topic]
+      redirect_to :action => :show
+    else
+      render :edit
+    end
+  end
+
+
   def destroy
     @topic.destroy
     flash[:success] = I18n.t('admin.topics.destroy.delete_success', :title => @topic.title)

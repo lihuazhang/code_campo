@@ -41,7 +41,7 @@ CodeCampo::Application.routes.draw do
     resources :fragments, :only => [:index, :edit, :update]
     resource  :site, :only => [:show, :update]
     resources :users, :only => [:index, :show, :destroy]
-    resources :topics, :only => [:index, :show, :destroy]
+    resources :topics, :only => [:index, :show, :destroy, :edit, :update]
     resources :replies, :only => [:index, :show, :destroy]
   end
 end
