@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :require_no_logined
+  before_filter :require_no_logined, :except => :index
+
 
   def new
     @user = User.new
@@ -15,4 +16,9 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
+  def index
+    @users = User.order_by([:created_at, :desc]).page(params[:page])
+  end
+
 end

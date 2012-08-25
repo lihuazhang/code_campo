@@ -39,6 +39,7 @@ zh-CN:
       marked: "收藏"
       my: "我的话题"
       replied: "回复过"
+      member: "会员"
     admin:
       dashboard: "面板"
       users: "用户"
@@ -76,6 +77,7 @@ zh-CN:
   users:
     index:
       member: "会员"
+      info: "目前已经有 %{count} 位会员加入了 Test China。"
     new:
       already_have_account: "已经注册过？"
   user_sessions:

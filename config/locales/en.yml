@@ -39,6 +39,7 @@ en:
       marked: "Marked"
       my: "My Topics"
       replied: "Replied"
+      memeber: "Member"
     admin:
       dashboard: "Dashboard"
       users: "Users"
@@ -76,6 +77,7 @@ en:
   users:
     index:
       member: "Memeber"
+      info: "Now we have %{count} member in Test China."
     new:
       already_have_account: "Already signup?"
   user_sessions:
@@ -169,7 +171,6 @@ en:
         profile_name: "Profile name"
         email: "Email"
         sign_up: "Sign up"
-      show:
         users: "Users"
         person_page: "Person page"
         url: "Url"

@@ -1,0 +1,13 @@
+#main
+  .container
+    .row
+      #mainbar.span12
+        = render :partial => 'layouts/flash_messages'
+        .users_info
+          = t '.info', :count => @users.count
+        %section#users.box
+          - @users.each do |user|
+            .span1
+              .avatar= link_avatar_to_person(user)
+              .name= user.screen_name
+        = paginate @users

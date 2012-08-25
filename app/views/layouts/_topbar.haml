@@ -18,6 +18,9 @@
             %li= link_to t('.replied'), replied_topics_path
       %li{:class => (controller_name == 'search' ? 'active' : nil)}
         = link_to t('.search'), search_path
+      %li{:class => (controller_name == 'users' ? 'active' : nil)}
+        = link_to t('.member'), users_path
+
     %ul.nav.nav-pills.pull-right
       - if logined?
         %li.dropdown
