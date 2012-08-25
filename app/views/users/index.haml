@@ -9,5 +9,5 @@
           - @users.each do |user|
             .span1
               .avatar= link_avatar_to_person(user)
-              .name= user.screen_name
+              .name= user.name
         = paginate @users
