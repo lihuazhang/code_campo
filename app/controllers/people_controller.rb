@@ -3,7 +3,8 @@ class PeopleController < ApplicationController
 
   def show
     @topics = @person.topics.order_by([[:created_at, :desc]]).page(1).per(10)
-    @topics_count = @person.topics.count
+    @topics_count = @person.topics.where(:draft.ne => 1).count
+    @topics_draft_count = @person.topics.where(:draft => 1).count
     @replies_count = @person.replies.count
   end
 

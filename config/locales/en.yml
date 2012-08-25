@@ -73,6 +73,7 @@ en:
       edit_profile: "Edit profile"
       person_status: "Person status"
       topics_count: "Topics %{count}"
+      topics_draft_count: "Drafts %{count}"
       replies_count: "Replies %{count}"
   users:
     index:

@@ -73,6 +73,7 @@ zh-CN:
       edit_profile: "编辑个人资料"
       person_status: "个人统计"
       topics_count: "话题数 %{count}"
+      topics_draft_count: "草稿数 %{count}"
       replies_count: "回帖数 %{count}"
   users:
     index:
