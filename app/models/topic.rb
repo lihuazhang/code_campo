@@ -61,7 +61,7 @@ class Topic
   end
 
   def relate_topics(count)
-    Topic.active.any_in(:tags => tags).limit(count).where(:_id.ne => id)
+    Topic.active.any_in(:tags => tags).limit(count).where(:_id.ne => id).where(:draft.ne => 1)
   end
 
   def mark_by(user)
