@@ -21,3 +21,7 @@
 every 1.day do
   runner "Tag.recount"
 end
+
+every 1.day, :at => '5:00 am' do
+    rake "-s sitemap:refresh"
+end
